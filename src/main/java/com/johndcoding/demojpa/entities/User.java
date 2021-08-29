@@ -17,7 +17,7 @@ public class User implements Serializable {
 
     private String name;
 
-    @OneToMany(targetEntity = Task.class, mappedBy = "author")
+    @OneToMany(targetEntity = Task.class, mappedBy = "author", fetch = FetchType.EAGER)
     private List<Task> tasks;
 
 }
